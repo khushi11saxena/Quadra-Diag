@@ -15,7 +15,7 @@ A machine learning-based **disease prediction system** that can **simultaneously
 
 ## 📌 Project Overview
 
-![System Architecture](image_path)
+![System Architecture](Main.png)
 
 This system processes **medical data** collected from various datasets and applies **machine learning algorithms** to predict diseases accurately. The model is deployed using **Flask**, allowing users to input patient parameters and receive disease predictions instantly.
 
