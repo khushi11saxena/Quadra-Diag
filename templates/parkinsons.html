@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson disease prediction</title>
+     
+     <!-- Font Awesome Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Link css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- logo -->
+    <link rel="icon" href="{{ url_for('static', filename='Parkinsons.jpg') }}">
+
+
+</head>
+<body>
+     <!-- === Header start === -->
+     <header>
+        <nav>
+            <ul class='nav-bar-dis'>
+                <li class='logo'><a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='logo.png') }}" /></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('heart') }}">Heart</a></li>
+                <li><a href="{{ url_for('parkinsons') }}">Parkinson</a></li>
+                <li><a href="{{ url_for('liver') }}">Liver</a></li>
+            
+                    <label for="check" class="close-menu-dis"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu-dis"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+    <!-- === Header End === -->
+    <!-- ==== Home Image ==== -->
+    <div class="diss">
+    <img class="image2" src="{{ url_for('static', filename='Parkinsons.jpg') }}" alt="Heart">
+    
+    <span class="title">Parkinson's Disease Prediction</span>
+
+    <div class="card">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label>MDVP_Fo<input class="form-input" type="text" name="MDVP_Fo" placeholder="111.9" required><br></label>
+            <label>MDVP_Fhi<input class="form-input" type="text" name="MDVP_Fhi" placeholder="157.9" required><br></label>
+            <label>MDVP_Flo<input class="form-input" type="text" name="MDVP_Flo" placeholder="74.997" required><br></label>
+            <label>Jitter<input class="form-input" type="text" name="Jitter" placeholder="0.0078" required><br></label>
+            <label>Jitter Abs<input class="form-input" type="text" name="Jitter_Abs" placeholder="0.0007" required><br></label>
+            <label>MDVP_RAP<input class="form-input" type="text" name="MDVP_RAP" placeholder="0.0037" required><br></label>
+            <label>MDVP_PPQ<input class="form-input" type="text" name="MDVP_PPQ" placeholder="0.00554" required><br></label>
+            <label>Jitter_DDP<input class="form-input" type="text" name="Jitter_DDP" placeholder="0.01109" required><br></label>
+            <label>MDVP_Shimmer<input class="form-input" type="text" name="MDVP_Shimmer" placeholder="0.04374" required><br></label>
+            <label>MDVP_Shimmer_dB<input class="form-input" type="text" name="MDVP_Shimmer_dB" placeholder="0.436" required><br></label>
+            <label>Shimmer_APQ3<input class="form-input" type="text" name="Shimmer_APQ3" placeholder="0.0218" required><br></label>
+            <label>Shimmer_APQ5<input class="form-input" type="text" name="Shimmer_APQ5" placeholder="0.0313" required><br></label>
+            <label>MDVP_APQ"<input class="form-input" type="text" name="MDVP_APQ" placeholder="0.2971" required><br></label>
+            <label>Shimmer_DDA<input class="form-input" type="text" name="Shimmer_DDA" placeholder="0.06545" required><br></label>
+            <label>NHR<input class="form-input" type="text" name="NHR" placeholder="0.22111" required><br></label>
+            <label>HNR<input class="form-input" type="text" name="HNR" placeholder="21.870" required><br></label>
+            <label>RPDE<input class="form-input" type="text" name="RPDE" placeholder="0.345" required><br></label>
+            <label>DFA<input class="form-input" type="text" name="DFA" placeholder="0.876" required><br></label>
+            <label>spread1<input class="form-input" type="text" name="spread1" placeholder="4.7.(-ve)" required><br></label>
+            <label>spread2<input class="form-input" type="text" name="spread2" placeholder="0.26612" required><br></label>
+            <label>D2<input class="form-input" type="text" name="D2" placeholder="2.3512" required><br></label>
+            <label>PPE<input class="form-input" type="text" name="PPE" placeholder="0.233" required><br></label>
+                 <input type="submit" class="my-cta-button" value="predict">
+        </form>
+    </div>
+</div> 
+
+
+
+    <!-- ===== Footer ===== -->
+    <div class="footer-d">
+        <h1>Developed by Group 33</h1>
+        <div class="team">
+            <img class="gife" src="{{ url_for('static', filename='gif2.gif') }}" alt="logo">
+        </div>
+      
+        <div class="copyr"><p>© 2024 QuadraDiag.<a></a></p> </div>
+    </div>
+    <!-- Jquery Link -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

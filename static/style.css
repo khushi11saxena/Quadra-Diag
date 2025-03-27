@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbanist,"Noto Sana KR",sans-serif;
+}
+.nav-bar {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 12px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.nav-bar-dis {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.854);
+   
+}
+.nav-bar-dis .menu li a {
+    color: rgb(57, 84, 58);
+}
+audio{
+    display: none;
+}
+/*Disease Nav Bar*/
+.logo img {
+    width: 8rem;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 10rem;
+    
+}
+.menu {display: flex;}
+.menu li {
+    padding-left: 30px;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(101, 231, 114);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgb(0, 0, 0);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+/*For Disease section*/
+.open-menu-dis , .close-menu-dis{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu-dis {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: rgb(52, 73, 72);
+}
+
+.close-menu-dis {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgb(0, 0, 0);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu-dis , .close-menu-dis {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+label{
+    color: #777;
+    font-weight: 200;
+    font-size: 15px;
+}
+.container{
+    width:100%;
+    height:83vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.content h3{
+    font-size: 33px;
+    color: #fafafa;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.content h3 span{
+    color: rgba(187, 255, 187, 0.952);
+}
+.content p{
+    font-size: 24px;
+    color: rgb(236, 237, 237);
+    margin-bottom: 50px;
+}
+.container .bgvid{
+    margin-top: 30px;
+}
+.bgvid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .bgvid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .bgvid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/*ABOUT SECTOTION OPENING*/
+.about{
+    padding: 50px 0;
+    background-color: #eaeaea;
+}
+
+.about .content_about h3{
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    color: #333;
+}
+.about .content_about ul{
+    text-align: center;
+    list-style: none;
+    margin-top: 1.4rem;
+}
+.about .content_about ul li{
+    margin: 1.4rem;
+    font-size: 1.3rem;
+    color: #666;
+}
+.abo{
+    margin: 2rem;
+    font-size: 1.3rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    background:#fff;
+    width:30rem;
+    padding:2rem;
+    margin:2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+    text-align: center;
+}
+.box .sym p{
+    color: #666;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+    
+}
+.box:hover{
+    border: 1px solid rgb(55, 96, 64);
+    transform: scale(1.02);
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+}
+
+.symptoms{
+    font-size: 2rem;
+    color: rgb(51, 139, 51);
+    text-align: center;
+    
+}
+.symptoms:hover{
+    color: rgb(52, 81, 52);
+}
+
+.description{
+    color: #666;
+    margin: 10px;
+    justify-content: justify;
+}
+
+
+
+/* ===== Images for Disease page ===== */
+
+.image2{
+    width: 20rem;
+    border: 2px solid rgb(105, 97, 97);
+    margin:50px;
+    margin-left: 30rem;
+}
+.image2:hover{
+    border: 3.5px solid rgba(0, 128, 0, 0.587);
+}
+@media(max-width: 768px){
+    .image2{
+        margin-left: 15rem;
+        height: 49%;
+        width: 49%;
+    }
+}
+@media(max-width: 420px){
+    .image2{
+        margin-left: 5rem;
+        
+    }
+}
+
+
+.title{
+    font-size: 1.6rem;
+    color: #5a5a5a;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    margin: auto;
+  
+}
+
+/* ===== FORMS CODE ===== */
+.diss{
+    background-color: rgb(241, 255, 241);;
+    padding: 20px 0 20px 0;
+}
+.card{
+    display: flex;
+    margin:2rem 0;
+    flex: 1 0 auto;
+}
+form{
+    display: block;
+    margin: auto;
+}
+.form-input{
+    display: flex;
+	text-align: center;
+	width: 390px;
+	height: 28px;
+	margin: auto 0 2px 0;
+    border-radius: 10px;
+    border: 2px solid rgb(91, 91, 91);
+    padding: 3px;
+    transition: .25s;
+    outline: none;
+   
+}
+.form-input:hover{
+    border: 2px solid rgb(205, 117, 117);
+}
+.form-input:focus{
+    border: 2px solid #63b367;
+    
+}
+
+.my-cta-button{
+    background-color: #343434;
+   	border: 1.5px solid #000000;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+	margin-top: 10px;
+    padding: 10px 36px;
+  
+    color: #cdf9d7;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.my-cta-button:hover{
+    color: #343434;
+    background-color: #cdf9d7;
+    transition: 1s;
+    border: 2px solid #4f4f4f;
+}
+
+.my-cta-button:active{
+    box-shadow: 0 0;
+}
+/* ====== Result CSS ======== */
+.result_main{
+    width:100%;
+    height:83vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.result_main .bg-vid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.result_heading {
+    font-size: 3rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.result_row{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+@media(min-aspect-ratio: 16/9){
+    .bg-vid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .bg-vid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.suffer{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(255, 182, 182);
+    padding: 50px;
+    text-shadow: #000000;
+}
+.not_suffer{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(152, 250, 152);
+    padding: 50px;
+    text-shadow: #000000;
+}
+.return a{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 80px;
+}
+
+/* === Media Query === */
+@media(max-width:991px) {
+    html{
+        font-size: 60%;
+    }
+    .home::before,
+    .home::after{
+        display: none;
+    }
+    #menu-bar{
+        font-size: 2rem;
+    }
+    .description{
+        font-size: 12px;
+    }
+    .image2{
+        margin-top: 10rem;
+        height: 49%;
+        width: 49%;
+    }
+    
+}
+
+@media(max-width:768px){
+    .logo{
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+        position: relative;
+        right: 17rem;
+    }
+    header #menu-bar{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        width: 100%;
+        background: var(--red);
+        border-top: .2rem solid rgba(0, 0, 0, 0.1);
+        transform:scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    header .navbar.nav-toggle{
+        transform:scaleY(1);
+        opacity: 1;
+    }
+    header .navbar ul{
+        display: flex;
+        flex-flow: column;
+        padding: 2rem;
+    }
+    header .navbar ul li{
+        margin:1.5rem;
+        width: 100%;
+    }
+    header .navbar ul li a{
+        display: block;
+        color:#fff;
+        padding-left: 2rem;
+        border-left: .2rem solid #fff;
+        font-size: 2rem;
+    }
+    header .navbar ul li a:hover,
+    header .navbar ul li a.active{
+        color:#333;
+        border-color: #333;
+    }
+    .fa-times{
+        transform:rotate(180deg);
+    }
+    .home .content{
+        text-align: center;
+        margin-top: 15rem;
+    }
+
+    .home .content h3{
+        font-size: 1.6rem;
+    }
+    .form-input{
+        width: 300px;
+    }
+}
+
+
+.footer{
+    background-color: rgb(0, 0, 0) ;
+    height: 170vh;  
+    border-radius: 50px 50px 0 0;
+}
+.footer h1{
+    font-size: 2rem;
+    color: #909090;
+    text-align: center;
+    padding: 40px 0 7rem 0;
+
+}
+.footer p{
+    font-size: 1.3rem;
+    color: #555;
+    text-align: center;
+    padding: 0 40px 40px 40px;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.member h3{
+    font-size: 1.6rem;
+    color: rgba(101, 132, 101, 0.952);
+    text-align: center;
+    padding: 20px;
+}
+
+.member img{
+    width: 10rem;
+    height: 10rem;
+    margin-left: 35px;
+    border-radius: 50%;
+    align-items: center;
+}
+.social{
+    display: grid;
+    grid-template-columns: 70px 70px;
+    padding-left: 4.5rem;
+    padding-bottom: 4rem;
+}
+.gife {
+    width: 20rem;
+    
+    margin-left: 35px;
+    border-radius: 50%;
+    align-items: center;
+}
+.copyr p{
+    font-size: 1.2rem;
+    color: rgb(210, 233, 210);
+    text-align: center;
+    padding: 10px 40px 40px 40px;
+}
+/*Disease Footer*/
+.footer-d{
+    background-color: rgb(0, 0, 0) ;
+    height: 100vh;  
+    border-radius: 50px 50px 0 0;
+}
+.footer-d h1{
+    font-size: 2rem;
+    color: #909090;
+    text-align: center;
+    padding: 40px 0 7rem 0;
+
+}
+.footer-d p{
+    font-size: 1.3rem;
+    color: #555;
+    text-align: center;
+    padding: 0 40px 40px 40px;
+}

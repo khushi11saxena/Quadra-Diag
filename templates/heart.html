@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart disease prediction</title>
+     
+     <!-- Font Awesome Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Link css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- logo -->
+    <link rel="icon" href="{{ url_for('static', filename='Heart.png') }}">
+
+
+</head>
+<body>
+     <!-- === Header start === -->
+     <header>
+        <nav>
+            <ul class='nav-bar-dis'>
+                <li class='logo'><a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='logo.png') }}" /></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('heart') }}">Heart</a></li>
+                <li><a href="{{ url_for('parkinsons') }}">Parkinson</a></li>
+                <li><a href="{{ url_for('liver') }}">Liver</a></li>
+            
+                    <label for="check" class="close-menu-dis"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu-dis"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+    <!-- === Header End === -->
+    <!-- ==== Home Image ==== -->
+    <div class="diss">
+    <img class="image2" src="{{ url_for('static', filename='Heart.png') }}" alt="Heart">
+    
+    <span class="title">Heart Disease Prediction</span>
+
+    <div class="card">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label>Age<input class="form-input" type="text" name="age" placeholder="eg: 37" required><br></label>
+            <label>Sex<input class="form-input" type="text" name="sex" placeholder="Male:1, female:0" required><br></label>
+            <label>Chest pain type<input class="form-input" type="text" name="cp" placeholder=" 1: typical angina,2: atypical angina,3: non-anginal pain, 4: asymptomatic" required><br></label>
+            <label>Resting blood pressure<input class="form-input" type="text" name="trestbps" placeholder="in mm Hg eg:130" required><br></label>
+            <label>Serum cholestoral <input class="form-input" type="text" name="chol" placeholder=" in mg/dl eg:250" required><br></label>
+            <label>Fasting blood sugar<input class="form-input" type="text" name="fbs" placeholder=" 120 mg/dl(1 = true; 0 = false)" required><br></label>
+            <label>Resting electrocardiographic results<input class="form-input" type="text" name="restecg" placeholder=" eg:1" required><br></label>
+            <label>Maximum heart rate achieved <input class="form-input" type="text" name="thalach" placeholder="eg:187" required><br></label>
+            <label>Exercise induced angina <input class="form-input" type="text" name="exang" placeholder="1 = yes; 0 = no" required><br></label>
+            <label>Oldpeak<input class="form-input" type="text" name="oldpeak" placeholder="ST depression induced by exercise relative to rest eg:3.5" required><br></label>
+            <label>Slope<input class="form-input" type="text" name="slope" placeholder="the slope of the peak exercise ST segment eg: 0" required><br></label>
+            <label>Number of major vessels<input class="form-input" type="text" name="ca" placeholder="(0-3) colored by flourosopy eg:0" required><br></label>
+            <label>Thalassemia<input class="form-input" type="text" name="thal" placeholder="3 = normal; 6 = fixed defect; 7 = reversable defect eg:2" required><br></label>
+           
+            
+
+        <input type="submit" class="my-cta-button" value="predict">
+        </form>
+    </div>
+</div> 
+
+
+
+    <!-- ===== Footer ===== -->
+    <div class="footer-d">
+        <h1>Developed by Group 33</h1>
+        <div class="team">
+            <img class="gife" src="{{ url_for('static', filename='gif2.gif') }}" alt="logo">
+        </div>
+      
+        <div class="copyr"><p>© 2024 QuadraDiag.<a></a></p> </div>
+    </div>
+    <!-- Jquery Link -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

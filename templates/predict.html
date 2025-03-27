@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+     
+     <!-- Font Awesome Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body >
+    <div class="nav-bar">
+         <li class='logo'><a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='logo31.png') }}" /></a></li>
+    </div>
+    <section class="result_main">
+       
+        <video autoplay loop muted play-inline class="bg-vid">
+            <source src= {{ url_for('static', filename='predict.mp4') }} type="video/mp4">
+        </video>
+        <audio controls autoplay loop>
+            <source src="{{ url_for('static', filename='music.mpeg') }}" type="audio/mpeg"></audio>
+    <h3 class="result_heading">Result</h3>
+    <div class="result_row">
+        {% if prediction==1 %}
+        <div class="suffer">You are suffering from disease , please visit a doctor.</div>
+        {% elif prediction==0 %}
+        <div class="not_suffer">You are healthy. </div>
+        {% endif %}
+
+    </div>
+
+    <div class="result_home">
+        <div class="return"><a href="{{ url_for('index') }}">Home</a></div>
+    </div>
+    </section
+    
+</body>
+</html>

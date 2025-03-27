@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diabetes prediction</title>
+     
+     <!-- Font Awesome Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Link css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- logo -->
+    <link rel="icon" href="{{ url_for('static', filename='Diabetes.png') }}">
+</head>
+<body>
+     <!-- === Header start === -->
+     <header>
+        <nav>
+            <ul class='nav-bar-dis'>
+                <li class='logo'><a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='logo.png') }}" /></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('heart') }}">Heart</a></li>
+                <li><a href="{{ url_for('parkinsons') }}">Parkinson</a></li>
+                <li><a href="{{ url_for('liver') }}">Liver</a></li>
+            
+                    <label for="check" class="close-menu-dis"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu-dis"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+   <!-- ==== Home Image ==== -->
+    <div class="diss">
+    <img class="image2" src="{{ url_for('static', filename='Diabetes.png') }}" alt="diabetes">
+    <h3 class="title">Diabetes Prediction</h3>
+
+    <div class="card">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label>Number of Pregnancies<input class="form-input" type="text" name="pregnancies" placeholder="eg. 0,1,2" required><br></label>
+            <label>Glucose Level<input class="form-input" type="text" name="glucose" placeholder="eg. 80" required><br></label>
+            <label>Blood pressure measurement<input class="form-input" type="text" name="bloodpressure" placeholder="eg. 80 mm Hg" required><br></label>
+            <label>Skin Thickness<input class="form-input" type="text" name="skinthickness" placeholder="eg.20 mm" required><br></label>
+            <label>Insulin level in blood<input class="form-input" type="text" name="insulin" placeholder="eg.25(mu U/ml)" required><br></label>    
+            <label>Body Mass Index<input class="form-input" type="text" name="bmi" placeholder=" eg. 23.1 (weight in kg/(height in m)^2)" required><br></label>
+            <label>Diabetes Pedigree Percentage<input class="form-input" type="text" name="dpf" placeholder="eg. 0.52(percentage)" required><br></label>        
+            <label>Age<input class="form-input" type="text" name="age" placeholder="eg.34" required><br></label>
+        <input type="submit" class="my-cta-button" value="predict">
+        </form>
+    </div>
+    
+</div>
+
+<!-- ===== Footer ===== -->
+<div class="footer-d">
+    <h1>Developed by Group 33</h1>
+    <div class="team">
+        <img class="gife" src="{{ url_for('static', filename='gif2.gif') }}" alt="logo">
+    </div>
+  
+    <div class="copyr"><p>© 2024 QuadraDiag.<a></a></p> </div>
+</div>
+    <!-- Jquery Link -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

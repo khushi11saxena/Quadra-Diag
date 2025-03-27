@@ -1,0 +1,56 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "diabets.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "heart.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "parkinsons.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "Liver.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "predict.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/diabets",
+        "dest": "/diabets.html"
+      },
+      {
+        "src": "/heart",
+        "dest": "/heart.html"
+      },
+      {
+        "src": "/parkinsons",
+        "dest": "/parkinsons.html"
+      },
+      {
+        "src": "/Liver",
+        "dest": "/Liver.html"
+      },
+      {
+        "src": "/predict",
+        "dest": "/predict.html"
+      }
+    ]
+  }
+  

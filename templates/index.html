@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadraDiag: A Disease Prediction Web App</title>
+   
+     <!-- Font Awesome Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- logo -->
+    <link rel="icon" href="{{ url_for('static', filename='icons.png') }}">
+
+
+</head>
+
+<body>
+    <!-- === Header start === -->
+
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='logo31.png') }}" /></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                
+                <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('heart') }}">Heart</a></li>
+                <li><a href="{{ url_for('parkinsons') }}"">Parkinson</a></li>
+                <li><a href="{{ url_for('liver') }}">Liver</a></li>
+            
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+    <!-- === Header End === -->
+
+    <!-- === Home Start -->
+    <section class="container">
+        <video autoplay loop muted play-inline class="bgvid">
+            <source src= {{ url_for('static', filename='video.mp4') }} type="video/mp4">
+        </video>
+        <div class="content">
+            <h3><span>QuadraDiag :</span> A Disease Predictior</h3>
+            <p>This website is built with the motive to predict various
+                disease based on symptoms and other factors.
+            </p>
+        </section>
+    <!-- === Home End === -->
+        <audio autoplay controls  loop>
+            <source src="{{ url_for('static', filename='music.mpeg') }}" type="audio/mpeg">
+        </audio>
+
+
+    <section class="about">
+        <div class="content_about">
+            <h3>About</h3>
+           <p class="abo">Quadra Diag utilizes machine learning models to predict diabetes, heart, liver, and Parkinson's, empowering proactive health management. Join us in revolutionizing healthcare with cutting-edge technology and expertise.</p>
+            <h3>Disease which our webApp can predict are</h3>
+            <div class="box-container">
+            <div class="box">
+                <span class="symptoms">Diabetes</span>
+                <p class="description"> Diabetes is a chronic illness that develops when the body either cannot use the insulin that the pancreas makes properly or does not create enough of it. Uncontrolled diabetes frequently results in hyperglycemia, or elevated blood sugar, which over time causes major harm to numerous bodily systems, most notably the blood vessels and neurons.</p>
+                <span class="symptoms">Symptoms</span>
+             
+                <div class="sym"> 
+                    <p>Increased thirst</p>
+                    <p>Frequent urination</p>
+                    <p>Extreme hunger</p>
+                    <p>Blurred vision</p>
+                </div>
+            </div> 
+
+            <div class="box">
+                <span class="symptoms">Heart disease</span>
+                <p class="description">Heart disease describes a range of conditions that affect your heart. It includes Blood vessel disease, such as coronary artery disease.
+                    Heart rhythm problems (arrhythmias). Heart defects you're born with (congenital heart defects)</p>
+                <span class="symptoms">Symptoms</span>
+                <div class="sym"> 
+                <p>Chest pain,tightness, pressure and discomfort </p>
+                <p>Shortness of breath</p> 
+                <p>Pain, numbness, weakness </p>
+                <p>Pain in the neck, jaw, throat, upper abdomen or back</p> 
+            </div>
+                   
+            </div>
+            <div class="box">
+                <span class="symptoms">Parkinson's disease</span>
+                <p class="description"> Parkinson's disease is a chronic and progressive movement disorder that affects the nervous system. Its symptoms may vary from person to person, and early signs can be mild and easily overlooked.
+                </p>
+                <span class="symptoms">Symptoms</span>
+                
+                <div class="sym"> 
+                    <p>Shaking especially in the hands, arms, legs, or jaw</p>
+                    <p>Slowness of movement</p>
+                    <p>Muscle Rigidity</p>
+                    <p>Postural Instability</p>
+                    <p>Changes in speech, writing, and facial expressions</p>
+                </div>
+            </div>  
+            
+            <div class="box">
+                <span class="symptoms">Liver disease</span>
+                <p class="description"> Your liver is your body's largest solid organ. Symptoms of liver disease may vary, but they often include
+                    swelling and pain. The most common liver disease is hepatitis. Hepatitis is a chronic condition that can
+                     affect any part of the liver, including the liver itself. Sometimes there are no symptoms.
+                </p>
+                <span class="symptoms">Symptoms</span>
+               
+                <div class="sym"> 
+                    <p>yellow skin and eyes</p>
+                    <p>swollen ankles, legs, or abdomen</p>
+                    <p>nausea</p>
+                    <p>vomiting</p>
+                </div>
+            </div>
+
+            
+
+           
+            
+
+        </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <h1>Developed By </h1>
+        <div class="team">
+            <div class="member">
+                <img src="{{ url_for('static', filename='khushi.jpg') }}" alt="team1">
+                <h3>Khushi Saxena</h3>
+                <p>Developer & <br>Web Designer</p>
+                <div class="social">
+                    <a href="#"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#999" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></a>
+                    <a href="https://www.linkedin.com/in/khushi-saxena-542ba2216/"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f7f7f7" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"></path></svg></a>
+                    </div>
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='keerti.jpg') }}" alt="team1">
+                <h3>Keerti Saxena</h3>
+                <p>Developer & <br>Content Writer</p>
+                <div class="social">
+                <a href="#"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#999" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></a>
+                <a href="https://www.linkedin.com/in/keerti-saxena-21a65522b/"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f7f7f7" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"></path></svg></a>
+                </div>
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='swati.jpeg') }}" alt="team1">
+                <h3>Swati </h3>
+                <p>Web Developer &<br>SQL  </p>
+                <div class="social">
+                    <a href="#"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#999" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></a>
+                    <a href="https://www.linkedin.com/in/swati-tiwari-381615212/"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f7f7f7" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"></path></svg></a>
+                    </div>    
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='vishesh.jpeg') }}" alt="team1">
+                <h3>Vishesh Gupta </h3>
+                <p>Web Developer </p>
+                <div class="social">
+                    <a href="#"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#999" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></a>
+                    <a href="https://www.linkedin.com/in/vishesh-gupta-b668bb22b/"><svg class="magnet" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f7f7f7" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"></path></svg></a>
+                    </div>
+            </div>
+            <img class="gife" src="{{ url_for('static', filename='gif2.gif') }}" alt="logo">
+        </div>
+      
+        <div class="copyr"><p>© 2024 QuadraDiag.<a></a></p> </div>
+    </div>
+<!-- Jquery Link -->
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+
+</html>

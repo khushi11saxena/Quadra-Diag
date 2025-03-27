@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liver prediction</title>
+     
+     <!-- Font Awesome Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Link css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- logo -->
+    <link rel="icon" href="{{ url_for('static', filename='Liver.png') }}">
+</head>
+<body>
+     <!-- === Header start === -->
+     <header>
+        <nav>
+            <ul class='nav-bar-dis'>
+                <li class='logo'><a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='logo.png') }}" /></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('heart') }}">Heart</a></li>
+                <li><a href="{{ url_for('parkinsons') }}">Parkinson</a></li>
+                <li><a href="{{ url_for('liver') }}">Liver</a></li>
+            
+                    <label for="check" class="close-menu-dis"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu-dis"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+    <!-- === Header End === -->
+   <!-- ==== Home Image ==== -->
+    <div class="diss">
+    <img class="image2" src="{{ url_for('static', filename='Liver.png') }}" alt="diabetes">
+    <h3 class="title">Liver Prediction</h3>
+
+    <div class="card">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label>Age<input class="form-input" type="text" name="age" placeholder="years eg. 34" required><br></label>
+            <label>Gender<input class="form-input" type="text" name="gender" placeholder=" Male:1 Female:0" required><br></label>
+            <label>Total Bilirubin<input class="form-input" type="text" name="tot_bilirubin" placeholder=" in mg/dl eg:0.2 " required><br></label>
+            <label>Direct Bilirubin <input class="form-input" type="text" name="direct_bilirubin" placeholder="in mg/dL eg 0.1 " required><br></label>
+            <label>Total Proteins<input class="form-input" type="text" name="tot_proteins" placeholder=" in g/dL eg:187 " required><br></label>
+            <label>Albumin<input class="form-input" type="text" name="albumin" placeholder=" in g/dL eg:16" required><br></label>
+            <label>Albumin & Globulin Ratio<input class="form-input" type="text" name="ag_ratio" placeholder=" eg:18" required><br></label>
+            <label>SGPT:Serum glutamate pyruvate transaminase<input class="form-input" type="text" name="sgpt" placeholder=" in IU/L eg:6.8" required><br></label>
+            <label>SGOT:Serum glutamic oxaloacetic transaminase:<input class="form-input" type="text" name="sgot" placeholder="in IU/L eg:3.3" required><br></label>
+            <label>Alkaline Phosphotase<input class="form-input" type="text" name="alkphos" placeholder=" in IU/L eg: 0.9 " required><br></label>
+           
+        <input type="submit" class="my-cta-button" value="predict">
+        </form>
+    </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<div class="footer-d">
+    <h1>Developed by Group 33</h1>
+    <div class="team">
+        <img class="gife" src="{{ url_for('static', filename='gif2.gif') }}" alt="logo">
+    </div>
+  
+    <div class="copyr"><p>© 2024 QuadraDiag.<a></a></p> </div>
+</div>
+    <!-- Jquery Link -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
