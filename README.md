@@ -2,6 +2,9 @@
 
 A machine learning-based **disease prediction system** that can **simultaneously identify multiple diseases** including **Heart Disease, Liver Disease, Parkinson’s Disease, and Diabetes** using Flask API. This system aims to provide **accurate, real-time predictions** by analyzing patient parameters.
 
+This project was a part of the **major project for the completion of the B.Tech in Computer Science and Engineering (CSE) degree**.
+
+
 ---
 
 ## 🚀 Features
@@ -111,7 +114,7 @@ http://127.0.0.1:5000/
 ![Input Form](Entry.png)
 
 ### **🔹 Prediction Result Example**
-![Prediction Output](Result.png)
+![Prediction Output](Results.png)
 
 ---
 
@@ -123,11 +126,8 @@ http://127.0.0.1:5000/
 
 ---
 
-## 📜 License
-This project is licensed under the **MIT License**.
 
----
 
-## 💡 Contributors
+## 💡 Meet Our Team
 ![Major Project Team ](Contributors.png)
 
