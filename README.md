@@ -103,16 +103,15 @@ http://127.0.0.1:5000/
 
 📌 **Step 4:** Users receive results and suggested medical consultation.
 
-![Workflow Diagram](image_path)
 
 ---
 
 ## 📷 Screenshots
 ### **🔹 Input Form for Disease Prediction**
-![Input Form](image_path)
+![Input Form](Entry.png)
 
 ### **🔹 Prediction Result Example**
-![Prediction Output](image_path)
+![Prediction Output](Result.png)
 
 ---
 
@@ -130,12 +129,5 @@ This project is licensed under the **MIT License**.
 ---
 
 ## 💡 Contributors
-👩‍💻 **Khushi Saxena** ([@khushi11saxena](https://github.com/khushi11saxena))
+![Major Project Team ](Contributors.png)
 
-Feel free to contribute and improve the project! 🚀
-
----
-
-## 📞 Contact
-📧 **Email:** your-email@example.com  
-🔗 **GitHub:** [Quadra-Diag](https://github.com/khushi11saxena/Quadra-Diag)
